@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#sobre">About Me</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contato">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" data-aos="fade-up">
+    <h1>Welcome to my portfolio!</h1>
+    <p>Discover my work and my skills</p>
+  </section>
+
+  <!-- Sobre Mim -->
+  <section id="sobre" data-aos="fade-right">
+    <h2>About Me</h2>
+    <p>Hello! I'm Wellington Queiroz Costa, a Cloud and Fullstack enthusiast. </p>
+    <p>💻 Cloud (Cloud Computing):</p>
+    <ul>
+      <li><strong>Microsoft Azure</strong>: Azure Functions, Azure App Service</li>
+      <li><strong>AWS</strong>: EC2, S3, Lambda</li>
+      <li><strong>GCP</strong>: Cloud Functions, App Engine</li>
+      <li>Terraform, Docker, Kubernetes</li>
+    </ul>
+    <p>🌐 Fullstack Development:</p>
+    <ul>
+      <li><strong>Frontend:</strong> React.js, Vue.js, Angular, HTML, CSS, JS/TS</li>
+      <li><strong>Backend:</strong> Node.js, Spring Boot, Django/Flask, .NET Core</li>
+      <li><strong>Databases:</strong> MongoDB, PostgreSQL, MySQL, SQL Server</li>
+      <li><strong>Tools:</strong> Git/GitHub, Postman, VS Code</li>
+    </ul>
+  </section>
+
+  <!-- Portfólio -->
+  <section id="portfolio" data-aos="zoom-in">
+    <h2>My Portfolio</h2>
+    <div class="portfolio-item">
+      <img src="assets/myportfolioweb.png" alt="Portfolio site" class="portfolio-img">
+      <div>
+        <h3>Personal Web Page (Portfolio Website)</h3>
+        <p>I created a personal web page to introduce myself professionally. Built with HTML, CSS, JS and hosted via GitHub Pages.</p>
+        <a href="https://github.com/wellfinal77" target="_blank" class="btn">View on GitHub</a>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <h3>Projeto 2</h3>
+      <p>Descrição do projeto.</p>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Get in Touch</h2>
+    <form id="contact-form" action="https://formspree.io/f/mzzrvpoq" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+      <p id="form-message" style="margin-top: 1rem; color: #00ff00;"></p>
+    </form>
+  </section>
+  
+
+
+
+<section>
+  <p>Email: fina202402@st.forum.ac.jp</p>
+  <p>Social Media: 
+    <a href="https://linkedin.com/in/seuusuario" target="_blank">LinkedIn</a> | 
+    <a href="https://twitter.com/seuusuario" target="_blank">Twitter</a> |
+    <a href="https://github.com/wellfinal77" target="_blank">GitHub</a>
+  </p>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Wellington Queiroz Costa. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="scripts.js"></script> <!-- Adicione esta linha -->
+  
+</body>
+</html>

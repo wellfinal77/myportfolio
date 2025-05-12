@@ -1,0 +1,175 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: url('https://images.unsplash.com/photo-1535905748047-14b2415c8a28?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #e0e0e0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  color: #39ff14;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #ff00ff;
+  transform: scale(1.1);
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(15, 15, 30, 0.85);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px #39ff14;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #00ffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #39ff14, 0 0 20px #ff00ff;
+}
+
+p, li, a {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Portfolio item */
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #39ff14;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px #ff00ff;
+}
+
+.portfolio-img {
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: #39ff14;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 10px #39ff14;
+}
+
+.btn:hover {
+  background: #ff00ff;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+form input,
+form textarea {
+  padding: 0.7rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #1c1c1c;
+  color: #fff;
+  font-family: inherit;
+  box-shadow: 0 0 10px #39ff14;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #aaa;
+}
+
+form input:focus,
+form textarea:focus {
+  background-color: #2e2e2e;
+  box-shadow: 0 0 20px #39ff14;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  font-size: 0.9rem;
+  color: #888;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  .portfolio-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .portfolio-item img {
+    max-width: 300px;
+    margin-right: 1.5rem;
+  }
+}
+
+/* Animations for neon lights */
+@keyframes neon-flicker {
+  0% { text-shadow: 0 0 5px #39ff14, 0 0 10px #ff00ff; }
+  25% { text-shadow: 0 0 15px #39ff14, 0 0 20px #ff00ff; }
+  50% { text-shadow: 0 0 10px #39ff14, 0 0 25px #ff00ff; }
+  75% { text-shadow: 0 0 5px #39ff14, 0 0 10px #ff00ff; }
+  100% { text-shadow: 0 0 15px #39ff14, 0 0 20px #ff00ff; }
+}
+
+h1, h2, h3 {
+  animation: neon-flicker 1.5s infinite alternate;
+}
+
