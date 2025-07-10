@@ -2,21 +2,57 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Wellington Queiroz Costa - Cloud and Fullstack Developer Portfolio. Specialized in Azure, AWS, React, Node.js and modern web technologies." />
+  <meta name="keywords" content="portfolio, developer, cloud, fullstack, azure, aws, react, nodejs" />
+  <meta name="author" content="Wellington Queiroz Costa" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wellfinal77.github.io/myportfolio/" />
+  <meta property="og:title" content="Wellington Queiroz Costa - Portfolio" />
+  <meta property="og:description" content="Cloud and Fullstack Developer Portfolio" />
+  <meta property="og:image" content="assets/myportfolioweb.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://wellfinal77.github.io/myportfolio/" />
+  <meta property="twitter:title" content="Wellington Queiroz Costa - Portfolio" />
+  <meta property="twitter:description" content="Cloud and Fullstack Developer Portfolio" />
+  <meta property="twitter:image" content="assets/myportfolioweb.png" />
+
+  <!-- PWA -->
+  <meta name="theme-color" content="#39ff14" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Wellington Portfolio" />
+  
+  <title>Wellington Queiroz Costa - Cloud & Fullstack Developer</title>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" as="style" />
+  <link rel="preload" href="styles.css" as="style" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
   <!-- Navbar -->
   <nav>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#sobre">About Me</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contato">Contact</a></li>
+      <li><a href="#home" aria-label="Go to home section">Home</a></li>
+      <li><a href="#sobre" aria-label="Go to about section">About Me</a></li>
+      <li><a href="#portfolio" aria-label="Go to portfolio section">Portfolio</a></li>
+      <li><a href="#contato" aria-label="Go to contact section">Contact</a></li>
     </ul>
   </nav>
 
@@ -50,11 +86,11 @@
   <section id="portfolio" data-aos="zoom-in">
     <h2>My Portfolio</h2>
     <div class="portfolio-item">
-      <img src="assets/myportfolioweb.png" alt="Portfolio site" class="portfolio-img">
+      <img src="assets/myportfolioweb.png" alt="Portfolio site screenshot" class="portfolio-img" loading="lazy">
       <div>
         <h3>Personal Web Page (Portfolio Website)</h3>
         <p>I created a personal web page to introduce myself professionally. Built with HTML, CSS, JS and hosted via GitHub Pages.</p>
-        <a href="https://github.com/wellfinal77/myportfolio" target="_blank" class="btn">View on GitHub</a>
+        <a href="https://github.com/wellfinal77/myportfolio" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub</a>
       </div>
     </div>
 
@@ -67,26 +103,23 @@
   <section id="contato">
     <h2>Get in Touch</h2>
     <form id="contact-form" action="https://formspree.io/f/mzzrvpoq" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="text" name="name" placeholder="Your Name" required aria-label="Your name" />
+      <input type="email" name="email" placeholder="Your Email" required aria-label="Your email" />
+      <textarea name="message" placeholder="Your Message" required aria-label="Your message" rows="5"></textarea>
       <button type="submit" class="btn">Send Message</button>
       <p id="form-message" style="margin-top: 1rem; color: #00ff00;"></p>
     </form>
   </section>
-  
 
-
-
-<section>
-  <p>Email: fina202402@st.forum.ac.jp</p>
-  <p>Social Media: 
-    <a href="https://linkedin.com/in/seuusuario" target="_blank">LinkedIn</a> | 
-    <a href="https://twitter.com/seuusuario" target="_blank">Twitter</a> |
-    <a href="https://github.com/wellfinal77" target="_blank">GitHub</a>
-  </p>
-</section>
-
+  <section>
+    <h2>Contact Information</h2>
+    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:fina202402@st.forum.ac.jp">fina202402@st.forum.ac.jp</a></p>
+    <p>Social Media: 
+      <a href="https://linkedin.com/in/seuusuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i> LinkedIn</a> | 
+      <a href="https://twitter.com/seuusuario" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile"><i class="fab fa-twitter"></i> Twitter</a> |
+      <a href="https://github.com/wellfinal77" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github"></i> GitHub</a>
+    </p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Wellington Queiroz Costa. All rights reserved.</p>
@@ -94,9 +127,13 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
   </script>
-  <script src="scripts.js"></script> <!-- Adicione esta linha -->
+  <script src="scripts.js"></script>
   
 </body>
 </html>
