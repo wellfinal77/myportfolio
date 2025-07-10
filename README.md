@@ -1,44 +1,44 @@
 # 🚀 Wellington Queiroz Costa - Portfolio
 
-Portfolio pessoal com design cyberpunk/futurista, otimizado para mobile e desktop.
+Personal portfolio with cyberpunk/futuristic design, optimized for mobile and desktop.
 
-## ✨ Características
+## ✨ Features
 
-- 🎨 Design cyberpunk com efeitos neon
-- 📱 Totalmente responsivo (mobile-first)
-- ⚡ Performance otimizada
+- 🎨 Cyberpunk design with neon effects
+- 📱 Fully responsive (mobile-first)
+- ⚡ Optimized performance
 - 🔧 PWA (Progressive Web App)
-- ♿ Acessibilidade melhorada
-- 🌐 SEO otimizado
+- ♿ Improved accessibility
+- 🌐 SEO optimized
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
-- **HTML5** - Estrutura semântica
-- **CSS3** - Estilos com variáveis CSS e animações
-- **JavaScript** - Interatividade e funcionalidades
+- **HTML5** - Semantic structure
+- **CSS3** - Styles with CSS variables and animations
+- **JavaScript** - Interactivity and functionality
 - **AOS** - Animate On Scroll
-- **Font Awesome** - Ícones
+- **Font Awesome** - Icons
 - **Google Fonts** - Orbitron
 
-## 📱 Como Acessar
+## 📱 How to Access
 
 ### 🖥️ **PC (Local)**
 ```bash
-# Navegue até a pasta do projeto
+# Navigate to the project folder
 cd myportfolio
 
-# Inicie um servidor local
+# Start a local server
 python -m http.server 8000
-# ou
+# or
 npx serve .
-# ou
+# or
 php -S localhost:8000
 ```
 
-**Acesse:** `http://localhost:8000`
+**Access:** `http://localhost:8000`
 
-### 📱 **Celular (Mesma Rede Wi-Fi)**
-1. Descubra o IP do seu PC:
+### 📱 **Mobile (Same Wi-Fi Network)**
+1. Find your PC's IP address:
    ```bash
    # Windows
    ipconfig
@@ -47,72 +47,72 @@ php -S localhost:8000
    ifconfig
    ```
 
-2. No celular, acesse:
+2. On your mobile device, access:
    ```
-   http://[IP_DO_PC]:8000
+   http://[PC_IP]:8000
    ```
-   Exemplo: `http://192.168.1.100:8000`
+   Example: `http://192.168.1.100:8000`
 
-### 🌐 **Acesso Público (GitHub Pages)**
+### 🌐 **Public Access (GitHub Pages)**
 **URL:** `https://wellfinal77.github.io/myportfolio`
 
-### 🔗 **Outras Opções de Deploy**
-- **Netlify**: Arraste a pasta para netlify.com
-- **Vercel**: Conecte com GitHub
+### 🔗 **Other Deployment Options**
+- **Netlify**: Drag the folder to netlify.com
+- **Vercel**: Connect with GitHub
 - **Firebase Hosting**: Deploy via Firebase CLI
 
-## 📋 Estrutura do Projeto
+## 📋 Project Structure
 
 ```
 myportfolio/
-├── index.html          # Página principal
-├── styles.css          # Estilos CSS
+├── index.html          # Main page
+├── styles.css          # CSS styles
 ├── scripts.js          # JavaScript
 ├── manifest.json       # PWA manifest
 ├── sw.js              # Service Worker
-├── README.md          # Este arquivo
-└── assets/            # Imagens e recursos
+├── README.md          # This file
+└── assets/            # Images and resources
     ├── myportfolioweb.png
     ├── cyberpunk-city-background-1p2r1bpxk5lmd0k2.jpg
     ├── generative-ai.jpg
-    └── outros arquivos...
+    └── other files...
 ```
 
-## 🎯 Melhorias Implementadas
+## 🎯 Implemented Improvements
 
 ### ✅ **Mobile Optimization**
-- Viewport otimizado
-- Touch targets de 44px mínimo
-- Prevenção de zoom em inputs (iOS)
-- Gestos touch detectados
-- Performance otimizada para conexões lentas
+- Optimized viewport
+- 44px minimum touch targets
+- Zoom prevention in inputs (iOS)
+- Touch gestures detected
+- Performance optimized for slow connections
 
-### ✅ **Acessibilidade**
+### ✅ **Accessibility**
 - ARIA labels
-- Navegação por teclado
-- Contraste melhorado
-- Suporte a `prefers-reduced-motion`
+- Keyboard navigation
+- Improved contrast
+- Support for `prefers-reduced-motion`
 - Focus indicators
 
 ### ✅ **Performance**
-- Lazy loading de imagens
-- CSS otimizado com variáveis
-- JavaScript modular
-- Service Worker para cache
-- Preload de recursos críticos
+- Lazy loading of images
+- Optimized CSS with variables
+- Modular JavaScript
+- Service Worker for caching
+- Preload of critical resources
 
 ### ✅ **SEO & PWA**
-- Meta tags completas
+- Complete meta tags
 - Open Graph tags
 - Twitter Cards
 - Manifest.json
 - Service Worker
-- Ícones PWA
+- PWA icons
 
-## 🔧 Configurações Avançadas
+## 🔧 Advanced Configuration
 
-### **Personalizar Cores**
-Edite as variáveis CSS em `styles.css`:
+### **Customize Colors**
+Edit CSS variables in `styles.css`:
 ```css
 :root {
   --primary-color: #39ff14;
@@ -121,52 +121,52 @@ Edite as variáveis CSS em `styles.css`:
 }
 ```
 
-### **Adicionar Novos Projetos**
-Edite a seção portfolio em `index.html`:
+### **Add New Projects**
+Edit the portfolio section in `index.html`:
 ```html
 <div class="portfolio-item">
-  <img src="assets/seu-projeto.png" alt="Descrição" class="portfolio-img">
+  <img src="assets/your-project.png" alt="Description" class="portfolio-img">
   <div>
-    <h3>Nome do Projeto</h3>
-    <p>Descrição do projeto</p>
-    <a href="link-do-projeto" target="_blank" class="btn">Ver Projeto</a>
+    <h3>Project Name</h3>
+    <p>Project description</p>
+    <a href="project-link" target="_blank" class="btn">View Project</a>
   </div>
 </div>
 ```
 
-### **Configurar Formulário de Contato**
-O formulário usa Formspree. Para configurar:
-1. Acesse [formspree.io](https://formspree.io)
-2. Crie uma conta e um novo formulário
-3. Substitua `mzzrvpoq` no `action` do formulário
+### **Configure Contact Form**
+The form uses Formspree. To configure:
+1. Go to [formspree.io](https://formspree.io)
+2. Create an account and a new form
+3. Replace `mzzrvpoq` in the form's `action`
 
-## 🚀 Deploy no GitHub Pages
+## 🚀 Deploy to GitHub Pages
 
-1. **Faça push para o GitHub:**
+1. **Push to GitHub:**
    ```bash
    git add .
-   git commit -m "Portfolio atualizado"
+   git commit -m "Updated portfolio"
    git push origin main
    ```
 
-2. **Ative GitHub Pages:**
-   - Vá para Settings > Pages
+2. **Enable GitHub Pages:**
+   - Go to Settings > Pages
    - Source: Deploy from a branch
    - Branch: main
    - Folder: / (root)
 
-3. **Acesse:** `https://wellfinal77.github.io/myportfolio`
+3. **Access:** `https://wellfinal77.github.io/myportfolio`
 
-## 📞 Contato
+## 📞 Contact
 
 - **Email:** fina202402@st.forum.ac.jp
 - **GitHub:** [wellfinal77](https://github.com/wellfinal77)
 - **LinkedIn:** [Wellington Queiroz Costa](https://linkedin.com/in/seuusuario)
 
-## 📄 Licença
+## 📄 License
 
-© 2025 Wellington Queiroz Costa. Todos os direitos reservados.
+© 2025 Wellington Queiroz Costa. All rights reserved.
 
 ---
 
-**Desenvolvido com ❤️ e ☕ por Wellington Queiroz Costa** 
+**Developed with ❤️ and ☕ by Wellington Queiroz Costa** 
