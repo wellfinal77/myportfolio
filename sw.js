@@ -1,10 +1,11 @@
-const CACHE_NAME = 'portfolio-v1.0.0';
+const CACHE_NAME = 'portfolio-v1.0.1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/scripts.js',
-  '/assets/myportfolioweb.png',
+  './',
+  './index.html',
+  './styles.css',
+  './scripts.js',
+  './manifest.json',
+  './assets/myportfolioweb.png',
   'https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
   'https://unpkg.com/aos@2.3.1/dist/aos.css',
@@ -19,6 +20,9 @@ self.addEventListener('install', event => {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
+      .catch(error => {
+        console.log('Cache failed:', error);
+      })
   );
 });
 
@@ -28,9 +32,36 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => {
         // Return cached version or fetch from network
-        return response || fetch(event.request);
-      }
-    )
+        if (response) {
+          return response;
+        }
+        
+        // Clone the request because it's a stream
+        const fetchRequest = event.request.clone();
+        
+        return fetch(fetchRequest).then(response => {
+          // Check if we received a valid response
+          if (!response || response.status !== 200 || response.type !== 'basic') {
+            return response;
+          }
+          
+          // Clone the response because it's a stream
+          const responseToCache = response.clone();
+          
+          caches.open(CACHE_NAME)
+            .then(cache => {
+              cache.put(event.request, responseToCache);
+            });
+          
+          return response;
+        });
+      })
+      .catch(() => {
+        // Return a fallback page if both cache and network fail
+        if (event.request.destination === 'document') {
+          return caches.match('./index.html');
+        }
+      })
   );
 });
 

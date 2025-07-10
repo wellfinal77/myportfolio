@@ -135,5 +135,20 @@
   </script>
   <script src="scripts.js"></script>
   
+  <!-- Service Worker simplificado para teste -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./sw-simple.js')
+          .then(function(registration) {
+            console.log('SW registered: ', registration);
+          })
+          .catch(function(registrationError) {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
+  
 </body>
 </html>
